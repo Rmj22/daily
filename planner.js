@@ -1,9 +1,6 @@
 $ (document).ready(function() {
   
-    //attempt at moment that was working but currently isnt
-     var moment = require('moment'); 
-     currentDay = moment().format('MMMM Do YYYY, h:mm:ss a');
-    
+     
      //onclick function for the save button on the time slots
       $(".saveBtn").on("click", function() {
       
@@ -50,4 +47,10 @@ $ (document).ready(function() {
       $(".upcoming").html(show)
        console.log($('#hour-17 .description').val(localStorage.getItem("hour-17")))
       })
+
+      //I made a few different trys to get moment working one way was the variable followed by moment.format.
+      //also tried just putting it in the html that also didnt work
+      
+      // moment().format();
+      // moment().format(String);
     
