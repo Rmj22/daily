@@ -1,6 +1,7 @@
 $ (document).ready(function() {
   
-    //attempt at moment that was working but currently isnt 
+    //attempt at moment that was working but currently isnt
+     var moment = require('moment'); 
      currentDay = moment().format('MMMM Do YYYY, h:mm:ss a');
     
      //onclick function for the save button on the time slots
