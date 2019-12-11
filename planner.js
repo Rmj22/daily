@@ -1,5 +1,12 @@
 $ (document).ready(function() {
   
+  var cd = moment();
+  console.log(cd.format("dddd, MMMM Do YYYY, h:mm:ss a"));
+
+  // $('#cd').text(cd.format("dddd, MMMM Do YYYY, h:mm:ss a"))
+  setInterval(function(){
+    $('#cd').text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+  }, 1000);
      
      //onclick function for the save button on the time slots
       $(".saveBtn").on("click", function() {
@@ -13,6 +20,7 @@ $ (document).ready(function() {
       //localStorage for the events that were entered in the table for each hour
       var show = $('#hour-9 .description').val(localStorage.getItem("hour-9"))
       $(".upcoming").html(show)
+      $('.description').empty();
        console.log($('#hour-9 .description').val(localStorage.getItem("hour-9")))
     
        var show = $('#hour-10 .description').val(localStorage.getItem("hour-10"))
@@ -47,7 +55,7 @@ $ (document).ready(function() {
       $(".upcoming").html(show)
        console.log($('#hour-17 .description').val(localStorage.getItem("hour-17")))
       })
-
+      
       //I made a few different trys to get moment working one way was the variable followed by moment.format.
       //also tried just putting it in the html that also didnt work
       
